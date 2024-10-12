@@ -1,0 +1,55 @@
+{
+  "name": "typed-event-bus",
+  "license": "MIT",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Typed Event Bus is a lightweight and fully type-safe event management library for TypeScript applications. It provides a simple and intuitive API to subscribe, unsubscribe, and emit events, ensuring strong type guarantees and enhancing code reliability. Perfect for building scalable and maintainable event-driven architectures in modern web and server-side projects.",
+  "author": "Carlos Cuadra",
+  "homepage": "https://github.com/QADRAX/typed-event-bus",
+  "bugs": {
+    "url": "https://github.com/QADRAX/typed-event-bus/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QADRAX/typed-event-bus.git"
+  },
+  "scripts": {
+    "build": "yarn clean && rollup -c",
+    "clean": "rimraf dist",
+    "format": "prettier --write \"src/**/*.{ts,tsx,json,js,jsx}\"",
+    "format:check": "prettier --list-different \"src/**/*.{ts,tsx,json,js,jsx}\"",
+    "test": "jest --maxWorkers=2",
+    "test:watch": "yarn test --watch",
+    "test:coverage": "jest --coverage --colors --maxWorkers=2",
+    "docs": "rimraf ./docs && typedoc src/index.ts"
+  },
+  "main": "index.js",
+  "module": "index.esm.js",
+  "types": "index.d.ts",
+  "devDependencies": {
+    "@babel/core": "^7.12.7",
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "@types/classnames": "^2.2.11",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12",
+    "copyfiles": "2.4.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0",
+    "prettier": "^2.2.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.33.3",
+    "rollup-plugin-copy": "^3.3.0",
+    "rollup-plugin-postcss": "^3.1.8",
+    "rollup-plugin-terser": "7.0.2",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "ts-jest": "^29.2.5",
+    "typedoc": "^0.26.9",
+    "typescript": "^5.6.3"
+  },
+  "engines": {
+    "yarn": "^1.5"
+  }
+}
